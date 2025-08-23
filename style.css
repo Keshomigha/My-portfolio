@@ -1,41 +1,93 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'poppins', sans-serif;
+/* Background gradient */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #4b2c91, #234a91);
+  min-height: 100vh;
+  color: #333;
 }
 
-body{
-    color: white;
+/* Navbar */
+.navbar .nav-link {
+  color: white !important;
+  margin-left: 15px;
 }
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 20px 10%;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+.navbar .nav-link.active {
+  background: white;
+  color: #234a91 !important;
+  border-radius: 5px;
+  padding: 5px 12px;
 }
-.logo{
-    position: relative;
-    font-size: 25px;
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
+
+/* Hero Section */
+.hero {
+  padding: 100px 0;
+  color: white;
+  height: 100vh;
 }
-navbar a{
-    display: inline-block;
-    font-size: 25px;
-    color: black;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 35px;
-    transition: .3s;
+
+/* Circle Image */
+.circle-img {
+  border: 10px solid rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: inline-block;
+  padding: 5px;
 }
-navbar a:hover{
-    color: aqua;
+.circle-img img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+}
+
+/* About Section */
+.about {
+  background: #f9f9ff;
+  border-radius: 15px;
+}
+.about img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+.text-purple {
+  color: #6a1b9a;
+}
+.badge {
+  font-size: 0.9rem;
+  padding: 10px 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+  .circle-img img {
+    width: 200px;
+    height: 200px;
+  }
+}
+/* Skills Section */
+.skills {
+  background: linear-gradient(135deg, #4b2c91, #234a91);
+  border-radius: 15px;
+}
+
+/* Progress Circles */
+.progress-circle {
+  width: 120px;
+  height: 60px;
+  border-radius: 120px 120px 0 0;
+  background: conic-gradient(#4b9cdb 0deg, #4b9cdb 0deg, #ddd 0deg);
+  position: relative;
+  margin: 0 auto;
+}
+.progress-circle::after {
+  content: attr(data-value) "%";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
 }
