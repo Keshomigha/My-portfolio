@@ -1,4 +1,4 @@
-/* Background gradient */
+/* Background */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -9,85 +9,151 @@ body {
 
 /* Navbar */
 .navbar .nav-link {
-  color: white !important;
+  color: #aeeaff !important;
   margin-left: 15px;
+  transition: 0.3s;
 }
-.navbar .nav-link.active {
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
   background: white;
   color: #234a91 !important;
   border-radius: 5px;
   padding: 5px 12px;
 }
 
-/* Hero Section */
+@media (max-width: 991px) {
+  .navbar .nav-link {
+    background: #234a91;
+    /* Dark background */
+    display: block;
+    margin: 5px 0;
+    border-radius: 5px;
+    padding: 8px 12px;
+  }
+}
+
+
+/* Hero */
 .hero {
-  padding: 100px 0;
+  padding: 120px 0;
   color: white;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Circle Image */
-.circle-img {
-  border: 10px solid rgba(255,255,255,0.2);
-  border-radius: 50%;
-  display: inline-block;
-  padding: 5px;
-}
 .circle-img img {
   width: 280px;
   height: 280px;
   object-fit: cover;
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: transform 0.5s;
 }
 
-/* About Section */
+.circle-img img:hover {
+  transform: scale(1.1);
+}
+
+/* About */
 .about {
-  background: #f9f9ff;
+  background: white;
   border-radius: 15px;
+  animation: fadeIn 1.5s ease;
+  height: 75vh;
 }
-.about img {
-  max-width: 100%;
-  border-radius: 15px;
-}
+
 .text-purple {
   color: #6a1b9a;
 }
-.badge {
-  font-size: 0.9rem;
-  padding: 10px 15px;
-}
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
-    text-align: center;
-  }
-  .circle-img img {
-    width: 200px;
-    height: 200px;
-  }
-}
-/* Skills Section */
+/* Skills */
 .skills {
   background: linear-gradient(135deg, #4b2c91, #234a91);
   border-radius: 15px;
+  min-height: 100vh;
+  /* instead of fixed height */
+  height: auto;
+  /* allow content to expand */
+  padding-bottom: 40px;
+  /* some spacing at bottom */
 }
 
-/* Progress Circles */
 .progress-circle {
   width: 120px;
-  height: 60px;
-  border-radius: 120px 120px 0 0;
-  background: conic-gradient(#4b9cdb 0deg, #4b9cdb 0deg, #ddd 0deg);
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#ddd 0deg, #ddd 360deg);
   position: relative;
   margin: 0 auto;
 }
+
 .progress-circle::after {
   content: attr(data-value) "%";
   position: absolute;
-  bottom: -25px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   font-weight: bold;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #fff;
+}
+
+/* Projects */
+.projects {
+  background: #f9f9ff;
+  border-radius: 15px;
+}
+
+.project-text {
+  color: #6a1b9a;
+}
+
+/* Contact */
+.contact {
+  background: linear-gradient(135deg, #234a91, #4b2c91);
+  border-radius: 15px;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #0e0c11, #234a91);
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideUp 1.5s forwards;
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
