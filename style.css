@@ -8,6 +8,11 @@ body {
 }
 
 /* Navbar */
+.navbar {
+  background-color:  rgba(75, 44, 145, 0.8); /* purple with 70% opacity */
+  backdrop-filter: blur(6px); /* nice glass effect */
+}
+
 .navbar .nav-link {
   color: #aeeaff !important;
   margin-left: 15px;
@@ -16,7 +21,7 @@ body {
 
 .navbar .nav-link.active,
 .navbar .nav-link:hover {
-  background: white;
+  background: #fff;
   color: #234a91 !important;
   border-radius: 5px;
   padding: 5px 12px;
@@ -37,7 +42,7 @@ body {
 /* Hero */
 .hero {
   padding: 120px 0;
-  color: white;
+  color: #fff;
   min-height: 100vh;
 }
 
@@ -55,17 +60,39 @@ body {
   transform: scale(1.1);
 }
 
-/* About */
+/* About Section */
 .about {
-  background: white;
-  border-radius: 15px;
-  animation: fadeIn 1.5s ease;
-  height: 75vh;
+  background: #fff;
 }
 
-.text-purple {
-  color: #6a1b9a;
+#about h2{
+  color: #7b4bc4;
 }
+
+.about-img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  #about h3 {
+    font-size: 1.3rem;
+    /* smaller heading on mobile */
+    text-align: center;
+  }
+
+  #about p {
+    font-size: 0.95rem;
+    /* slightly smaller text */
+    text-align: center;
+  }
+
+  #about .badge {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
 
 /* Skills */
 .skills {
@@ -100,14 +127,72 @@ body {
 }
 
 /* Projects */
-.projects {
-  background: #f9f9ff;
-  border-radius: 15px;
+/* Featured Work Section */
+#featured-work {
+  background: #fff;
 }
 
-.project-text {
+#featured-work h2 {
+  color: #7b4bc4;
+  font-size: 2.2rem;
+}
+
+#featured-work .underline {
+  width: 80px;
+  height: 3px;
+  background: #7b4bc4;
+  border-radius: 3px;
+}
+
+.card {
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-title {
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.badge {
   color: #6a1b9a;
 }
+
+.tags .badge {
+  margin-right: 6px;
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* GitHub Button */
+.btn-outline-primary {
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.btn-outline-primary i {
+  font-size: 1rem;
+}
+
 
 /* Contact */
 .contact {

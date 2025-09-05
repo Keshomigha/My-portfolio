@@ -16,7 +16,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-3 fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark py-3 fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-3" href="#">Portfolio</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -27,7 +27,7 @@
                     <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#featured-work">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -44,7 +44,7 @@
                     <h3 class="text-white">Aspiring Software Engineer | Problem Solver | Tech Enthusiast</h3>
                     <p class="fs-5">I design and build creative, efficient, and impactful digital solutions.</p>
 
-                    <a href="#projects" class="btn btn-light mt-3">See Details</a>
+                    <a href="#featured-work" class="btn btn-light mt-3">See Details</a>
                 </div>
                 <!-- Right image -->
                 <div class="col-md-6 text-center mt-4 mt-md-0">
@@ -56,17 +56,16 @@
         </div>
     </section>
 
-    <!-- About Me Section -->
     <section id="about" class="about py-5 fade-in">
         <div class="container">
             <h2 class="text-center fw-bold text-purple mb-4">About Me</h2>
             <div class="row align-items-center">
                 <!-- About Image -->
-                <div class="col-md-5 text-center mb-4 mb-md-0">
-                    <img src="images/About_pic.jpg" alt="About Me" class="img-fluid rounded-4 shadow">
+                <div class="col-12 col-md-5 text-center mb-4 mb-md-0">
+                    <img src="images/About_pic.jpg" alt="About Me" class="img-fluid rounded-4 shadow about-img">
                 </div>
                 <!-- About Text -->
-                <div class="col-md-7 slide-up">
+                <div class="col-12 col-md-7 slide-up">
                     <h3 class="fw-bold">Passionate about creating meaningful digital experiences</h3>
                     <p class="mt-3">
                         I am an undergraduate student at Sabaragamuwa University of Sri Lanka,
@@ -92,6 +91,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Skills Section -->
     <section id="skills" class="skills py-5 text-white fade-in">
@@ -141,14 +141,82 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects py-5 text-dark fade-in">
-        <div class="container text-center">
-            <h2 class="fw-bold project-text mb-5">My Projects</h2>
-            <img src="images/Project1.jpg" alt="Project_1"
-                class="img-fluid rounded shadow mx-auto d-block mb-4 zoom-in">
-            <h3 class="fw-bold">+more</h3>
-            <h4>🚀 Projects are loading... Stay tuned!</h4>
+    <section id="featured-work" class="py-5">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-4">Featured Work</h2>
+            <div class="underline mx-auto mb-5"></div>
+
+            <div class="row g-4">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="./images/Project1.jpg" class="card-img-top" alt="E-commerce Project">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">E-commerce Platform</h5>
+                            <p class="card-text flex-grow-1">
+                                A modern, responsive e-commerce solution with focus on user experience and conversion
+                                optimization.
+                                Built with scalability and performance in mind.
+                            </p>
+                            <div class="tags mb-3">
+                                <span class="badge bg-light">HTML</span>
+                                <span class="badge bg-lightk">CSS</span>
+                                <span class="badge bg-light">Bootstrap</span>
+                            </div>
+                            <a href="https://keshomigha.github.io/BootstrapLearning/" target="_blank"
+                                class="btn btn-outline-dark">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="./images/Project2.png" class="card-img-top" alt="Brand Identity">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Digital Clock</h5>
+                            <p class="card-text flex-grow-1">
+                                Real-time digital clock with smooth animations, responsive layout, and timezone/date
+                                toggle. Built for clarity and accessibility across devices.
+                            </p>
+                            <div class="tags mb-3">
+                                <span class="badge bg-light">HTML</span>
+                                <span class="badge bg-lightk">CSS</span>
+                                <span class="badge bg-light">Javascript</span>
+                            </div>
+                            <a href="https://keshomigha.github.io/DigitalClock/" target="_blank"
+                                class="btn btn-outline-dark">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="./images/Project3.png" class="card-img-top" alt="Mobile App Design">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title fw-bold">Blur Background Website</h5>
+                            <p class="card-text flex-grow-1">
+                              Smooth, real-time background blurring with adjustable intensity and performance-aware fallbacks for low-end devices.
+                            </p>
+                            <div class="tags mb-3">
+                                <span class="badge bg-light">HTML</span>
+                                <span class="badge bg-lightk">CSS</span>
+                                <span class="badge bg-light">Javascript</span>
+                            </div>
+                            <a href="https://keshomigha.github.io/ChangingBackground/" target="_blank"
+                                class="btn btn-outline-dark">
+                                <i class="fab fa-github me-2"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
